@@ -23,7 +23,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Install Vercel CLI
+      run: npm install -g vercel
+
     - name: Deploy to Vercel
-      run: |
-        curl -sL https://vercel.com/download | bash
-        vercel --token ${{ secrets.VERCEL_TOKEN }} --prod
+      run: vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
