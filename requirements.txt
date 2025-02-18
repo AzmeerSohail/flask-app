@@ -1,2 +1,1 @@
-Flask 
-APzuC0XKjHe4iZ7dkTKLD67q
+Flask==3.1.0
